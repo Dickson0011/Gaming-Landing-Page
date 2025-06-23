@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100vh;
+    width: 100%;
+    color: white;
+    font-family: 'Orbitron';
+}
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url("images/backgroundimage.jpg");
+    background-size: cover;
+    background-position: 65% center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+.container::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background: linear-gradient(
+    to right,
+    rgba(0, 20,25,0.9) 0%,
+    rgba(0,30,35,0.7) 40%,
+    rgba(0,40,45,0.3) 70%,
+    rgba(0,40,45,0.1) 100%
+    
+   );
+   pointer-events: none;
+   z-index: 1;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo-image{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+.logo-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+.header,.hero-section{
+    position: relative;
+    z-index: 2;
+}
+.header{
+    padding: 20px 40px;
+}
+.hero-section{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+    gap: 80px;
+    align-items: flex-start;
+}
+.left{
+    flex: 1.2;
+    padding: 20px;
+}
+.right{
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 20px;
+}
+.feature-list{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 35px 0;
+}
+.checkmark{
+    width: 32px;
+    height: 30px;
+    background-color: #00ffff;
+    border-radius: 1px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    font-size: 19px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.3);
+}
+.checkmark:hover{
+    transform: scale(1.1);
+    box-shadow: 
+    0 0 15px rgba(0, 255, 255, 0.8),
+    0 0 30px rgba(0, 255, 255, 0.4);
+    transition: all 0.2s ease-in-out;
+}
+
+.feature-item{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+.feature-item span{
+    font-size: 20px;
+    font-weight: bold;
+    color: #0ed4d4;
+    line-height: 1.5;
+}
+.feature-item span:not(.checkmark) {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0ed4d4;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.5px;
+}
+.game-showcase-card {
+    border: 2px solid cyan;
+    box-sizing: content-box;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    background:linear-gradient(
+        to right, 
+        rgba(0,0,0,0.4) 30%, 
+        rgba(0,0,0,0.3) 80%),
+        url(images/Sreeencardimage.jpg);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    background-size: cover;  
+    background-position: center right;  
+    background-repeat: no-repeat;
+    width: 650px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+    align-items: flex-start;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+.showcase-card-content{
+    padding: 30px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.showcase-card-content h2{
+    font-size: 2.5rem;
+    font-family: 'Orbitron';
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    text-shadow: 
+    0 0 10px rgba(0, 255, 255,0.5),
+    0 0 25px rgb(0, 255, 255,0.4),
+    0 0 50px rgb(0, 255, 255,0.2);
+    margin-top: 20px;
+}
+.showcase-card-content p{
+    font-size: 1.2rem;
+    font-family: 'Orbitron';
+    font-weight: 200;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+.startbtn{
+    display: flex;
+    flex-direction: row;
+    width: 42%;
+    height: 22%;
+    border: 2px solid #00ffff;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 25px;
+    cursor: pointer;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,255,255,0.4);
+    align-items: center;
+    transition: all0.3s ease-in-out;
+}
+.btn-text {
+    font-size: 1.1rem;  
+    font-weight: 600;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-price {
+    color: #00ffff;     
+    font-size: 1.3rem;  
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+    letter-spacing: 0.5px;
+}
+.startbtn:hover{
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), 0 0 50px rgba(0, 255, 255, 0.4);
+    transform: translateY(-2px);
+    border-color: #33ffff;
+}
+.left h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 
+    0 0 10px rgba(0, 255, 255, 0.8),
+    0 0 20px rgba(0, 255, 255, 0.4),
+    0 0 30px rgba(0, 255, 255, 0.2);
+    margin-bottom: 30px;
+    line-height: 1.1;
+}
+.story-indicator{
+    display: flex;
+    gap: 10px;   
+    align-items: center;
+}
+.story-text{
+    font-family: 'Orbitron';
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #00ffff;
+}
+.story-arrow{
+    color: #00ffff;
+    font-size: 1rem;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.5));
+}
+
+.right::after {
+    content: '';
+    position: absolute;
+    background: url('images/bottomlogo1.png') no-repeat center;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    height: 150px;
+    background-size: contain;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.3));
+}
+.section-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    box-sizing: border-box;
+    width: 50%;
+    height: 100px;
+    border-radius: 20px;
+    padding: 5px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    justify-content: center;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+.section-indicator span:not(.star) {
+    color: #00ffff;
+    font-family: 'Orbitron';
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+    letter-spacing: 1px;
+}
+.star {
+    color: #00ffff;
+    font-size: 1.5rem;
+    filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.6));
+}
+@media screen and (max-width: 1204px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 30px;
+        gap: 40px;
+    }
+    .left h2 {
+        font-size: 2.2rem;
+    }
+    .game-showcase-card {
+        width: 90%;
+        height: 350px;
+    }
+    .showcase-card-content h2 {
+        font-size: 2.2rem;
+    }
+    
+}
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .left, .right {
+        width: 100%;
+        padding: 10px;
+    }
+    .game-showcase-card {
+        width: 100%;
+        height: auto;
+    }
+    .startbtn {
+        width: 100%;
+        justify-content: center;
+    }
+    .section-indicator {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 480px) {
+  .container {
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  }
+  .hero-section {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+  .left, .right {
+    width: 100%;
+    padding: 0;
+  }
+  .left h2 {
+    font-size: 1.5rem;
+  }
+
+  .showcase-card-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .feature-item span:not(.checkmark) {
+    font-size: 0.95rem;
+  }
+  .game-showcase-card {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+  }
+
+  .startbtn {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .section-indicator {
+    width: 100%;
+  }
+}
